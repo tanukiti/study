@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Practice</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
@@ -25,13 +25,14 @@
         <botton-counter></botton-counter>
     </div>
 
-    <div ="#app4">
+    <div id="app4">
         <button v-on:click="vue">vue</button>
     </div>
     
     <!-- <script src="js/bundle.js"></script> -->
     <script>
         var app1 = new Vue({
+
             el: '#app1',
             data: {
                 seen: ''
@@ -61,24 +62,23 @@
             el: '#app3'
         })
 
-        var app4 = new VUe({
+        var app4 = new Vue({
             el: "#app4",
             data: {
-                name: 'hoge'
-            },
-            methods:  {
-                vue: function(event){
-                    alert("Hello Vue!" + this.name + "!")
-                    if (event) {
-                        alert(event.target.tagName)
+                object: 
+                    { firstName: 'ho',
+                     lastName: 'ge',
+                     age: 12,
+                     sex: 'men'
                     }
+            },
+            methods: {
+                vue: function(event){
+                    alert("Hello Vue!" + this.object + "!")
                 }
             }
         })
 
-    </script>
-    <script>
-        
     </script>
 </body>
 </html>
